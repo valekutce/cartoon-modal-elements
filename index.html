@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Popup modal layer</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <i class="far fa-check-circle"></i>
+                <p>Operation Completed!</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="open-modal">Open Modal</button>
+
+    <script>
+        var btnOpen = document.querySelector('.open-modal');
+        var btnClose = document.querySelector('.close-modal');
+        var modal = document.querySelector('.modal');
+
+        var toggleOpenClose = () => {
+            modal.classList.toggle('opened');
+        }
+
+        btnOpen.addEventListener('click', toggleOpenClose);
+        btnClose.addEventListener('click', toggleOpenClose);
+    </script>
+</body>
+</html>
